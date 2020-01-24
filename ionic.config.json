@@ -1,5 +1,7 @@
 {
   "name": "apc",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

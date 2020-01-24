@@ -65,3 +65,6 @@ core/www/
 .stencil/
 angular/build/
 
+package-lock.json
+www/
+platforms/

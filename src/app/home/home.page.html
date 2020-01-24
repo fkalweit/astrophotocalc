@@ -1,14 +1,35 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      AstroPhotoCalc
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <ion-card class="welcome-card">
+      <img  src="/assets/astrophotography.jpg" alt="" />
+      <ion-card-header>        
+        <ion-card-subtitle ></ion-card-subtitle>
+        <ion-card-title></ion-card-title>
+        <ion-label >shutter time:</ion-label><ion-input disabled="true" [(ngModel)]="shutterTime" value="Text 2"></ion-input>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">aperture</ion-label>
+          <ion-input type="number" [(ngModel)]="aperture" text-right id="aperture"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">sensor pixel pitch</ion-label>
+          <ion-input type="number" [(ngModel)]="pixelPitch" text-right id="pixelPitch"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">focal length</ion-label>
+          <ion-input type="number" [(ngModel)]="focalLength" text-right id="focalLength"></ion-input>
+        </ion-item>
+        <ion-button expand="full"  size="small" (click) = "calcTime()">Start</ion-button>
+        
+      </ion-card-content>
+    </ion-card>
+    
 </ion-content>
